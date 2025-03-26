@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md sticky-top border-bottom bg-body-tertiary">
+    <div class="container-fluid bg-body-tertiary">
+        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+                <a class="nav-link" href="/listings">Explore</a>
+                <a class="nav-link" href="/listings/new">Add new Listing</a>
+            </div>
+            <div class="navbar-nav ms-auto">
+                <% if(!curruser){ %>
+                    <a class="nav-link " href="/signup">Sign Up</a>
+                    <a class="nav-link" href="/login">Log In</a>
+                    <% } %>
+                        <% if(curruser){ %>
+                            <a class="nav-link" href="/logout">Log Out</a>
+                            <% } %>
+
+            </div>
+        </div>
+    </div>
+</nav>

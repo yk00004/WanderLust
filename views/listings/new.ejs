@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head> -->
+<% layout("./layouts/boilerplate") %>
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h2>Add a New Listing</h2>
+                <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="listing[title]" required class="form-control" placeholder="enter title">
+                        <div class="valid-feedback">next!!</div>
+                        <div class="invalid-feedback">wrong..</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">description</label>
+                        <textarea class="form-control" required name="listing[description]"
+                            placeholder="enter description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image</label>
+                        <input class="form-control" type="file" name="listing[image]">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price"  class="form-label">Price</label>
+                            <input class="form-control" required  min="0" name="listing[price]"
+                                placeholder="enter price">
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location</label>
+                            <input class="form-control" required type="text" name="listing[location]"
+                                placeholder="enter location">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contry" class="form-label">Country</label>
+                        <input class="form-control" type="text" required name="listing[country]" placeholder="enter country">
+                    </div>
+                    <button class="btn btn-dark mb-5">Add</button>
+                </form>
+            </div>
+        </div>
+    </body>
